@@ -8,7 +8,7 @@ export default function App() {
 
   // Fetch tasks from backend on load
   useEffect(() => {
-    axios.get('http://localhost:5000/api/tasks')
+    axios.get('https://smartdash-backend-pkgl.onrender.com/api/tasks')
       .then(res => setTasks(res.data))
       .catch(err => console.error('Failed to fetch tasks:', err));
   }, []);
@@ -16,7 +16,7 @@ export default function App() {
   // Add task
   const addTask = () => {
     if (!newTaskTitle.trim()) return;
-    axios.post('http://localhost:5000/api/tasks', {
+    axios.post('https://smartdash-backend-pkgl.onrender.com/api/tasks', {
       title: newTaskTitle,
       completed: false
     })
@@ -27,7 +27,7 @@ export default function App() {
 
   // Delete task
   const deleteTask = (id) => {
-    axios.delete(`http://localhost:5000/api/tasks/${id}`)
+    axios.delete(`https://smartdash-backend-pkgl.onrender.com/api/tasks/${id}`)
       .then(() => setTasks(tasks.filter(task => task._id !== id)))
       .catch(err => console.error('Failed to delete task:', err));
   };
@@ -35,7 +35,7 @@ export default function App() {
   // Toggle complete
   const toggleTask = (id) => {
     const task = tasks.find(t => t._id === id);
-    axios.put(`http://localhost:5000/api/tasks/${id}`, {
+    axios.put(`https://smartdash-backend-pkgl.onrender.com/api/tasks/${id}`, {
       ...task,
       completed: !task.completed
     })
