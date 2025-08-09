@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
 
-function TaskForm({ onAdd }) {
-  const [title, setTitle] = useState('');
+export default function TaskForm({ onAdd }) {
+  const [title, setTitle] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!title.trim()) return;
-
-    const res = await axios.post('/api/tasks', { title });
-    onAdd(res.data);
-    setTitle('');
+    onAdd(title);
+    setTitle("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Add new task"
+        placeholder="Add a task"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
@@ -25,5 +22,3 @@ function TaskForm({ onAdd }) {
     </form>
   );
 }
-
-export default TaskForm;
