@@ -3,10 +3,7 @@ import axios from "axios";
 
 // Use production URL if deployed, else localhost
 const api = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "production"
-      ? "https://smartdash-backend-pkgl.onrender.com/api"
-      : "http://localhost:5000/api",
+  baseURL: "https://smartdash-backend-pkgl.onrender.com/api"
 });
 
 // Add token from localStorage to every request
