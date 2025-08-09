@@ -436,12 +436,12 @@ export default function App() {
                       <div className="status-content">
                         <p className="status-title">
                           {percentCompleted === 100 
-                            ? "🎉 All tasks completed!"
+                            ? "All tasks completed!"
                             : percentCompleted >= 75 
-                            ? "⚡ Almost there!"
+                            ? "Almost there!"
                             : percentCompleted >= 50 
-                            ? "🚀 Great progress!"
-                            : "💪 Keep going!"
+                            ? "Great progress!"
+                            : "Keep going!"
                           }
                         </p>
                         <p className="status-subtitle">
