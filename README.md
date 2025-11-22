@@ -32,6 +32,26 @@ This is just the beginning — SmartDash will soon include features like Notes, 
 
 ---
 
+## Project Screenshots
+
+### Home Screen
+The main project home screen:
+![Routes Tab](./screenshots/home.png)
+
+### Add Task
+Adding taks/todos to the list:
+![Compare Tab](./screenshots/add.png)
+
+### Mark as Complete
+Marking them as complete to check the live stats:
+![Banking Tab](./screenshots/mark.png)
+
+### Delete Task
+Deleting the tasks no longer needed:
+![Pooling Tab](./screenshots/delete.png)
+
+---
+
 ## Getting Started
 
 ### 1. Clone the Repository
